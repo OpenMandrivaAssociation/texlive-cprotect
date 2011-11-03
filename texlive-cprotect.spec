@@ -1,3 +1,9 @@
+# revision 21209
+# category Package
+# catalog-ctan /macros/latex/contrib/cprotect
+# catalog-date 2011-01-27 23:21:47 +0100
+# catalog-license lppl1.3
+# catalog-version 1.0e
 Name:		texlive-cprotect
 Version:	1.0e
 Release:	1
@@ -48,6 +54,7 @@ corresponding "tables of ..." work happily.
 #- source
 %doc %{_texmfdistdir}/source/latex/cprotect/cprotect.dtx
 %doc %{_texmfdistdir}/source/latex/cprotect/cprotect.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ corresponding "tables of ..." work happily.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
