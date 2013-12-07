@@ -6,7 +6,7 @@
 # catalog-version 1.0e
 Name:		texlive-cprotect
 Version:	1.0e
-Release:	4
+Release:	5
 Summary:	Allow verbatim, etc., in macro arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cprotect
