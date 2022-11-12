@@ -1,19 +1,13 @@
-# revision 21209
-# category Package
-# catalog-ctan /macros/latex/contrib/cprotect
-# catalog-date 2011-01-27 23:21:47 +0100
-# catalog-license lppl1.3
-# catalog-version 1.0e
 Name:		texlive-cprotect
-Version:	1.0e
-Release:	11
+Version:	21209
+Release:	1
 Summary:	Allow verbatim, etc., in macro arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cprotect
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ behavior of fragile environments. Moving arguments, and
 corresponding "tables of ..." work happily.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,24 +41,11 @@ corresponding "tables of ..." work happily.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-2
-+ Revision: 750621
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-1
-+ Revision: 718163
-- texlive-cprotect
-- texlive-cprotect
-- texlive-cprotect
-- texlive-cprotect
-
