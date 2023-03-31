@@ -1,6 +1,6 @@
 Name:		texlive-cprotect
 Version:	21209
-Release:	1
+Release:	2
 Summary:	Allow verbatim, etc., in macro arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cprotect
