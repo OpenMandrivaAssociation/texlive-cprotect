@@ -3,7 +3,7 @@ Version:	21209
 Release:	2
 Summary:	Allow verbatim, etc., in macro arguments
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cprotect
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cprotect
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cprotect.doc.r%{version}.tar.xz
